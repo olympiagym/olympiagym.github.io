@@ -1,0 +1,21 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+
+module.exports = {
+  content: ["./**/*.{html,js}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["IBM Plex Sans", ...defaultTheme.fontFamily.sans],
+        serif: ["IBM Plex Serif", ...defaultTheme.fontFamily.serif],
+      },
+      colors: {
+      },
+      backgroundImage: (theme) => ({
+        "hero-bg": "url('/static/jelmer-assink-gzeTjGu3b_k-unsplash.jpg')",
+      }),
+    },
+  },
+  variants: {},
+  plugins: [],
+};

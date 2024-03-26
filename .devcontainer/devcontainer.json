@@ -1,0 +1,22 @@
+{
+	"image": "mcr.microsoft.com/vscode/devcontainers/javascript-node",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"github.vscode-pull-request-github",
+				"github.copilot-labs",
+				"github.copilot",
+				"editorconfig.editorconfig",
+				"github.copilot-chat",
+				"ritwickdey.liveserver",
+				"bradlc.vscode-tailwindcss",
+				"esbenp.prettier-vscode",
+				"heybourn.headwind"
+			]
+		}
+	},
+
+	"onCreateCommand": ".devcontainer/postCreate.sh"
+}
