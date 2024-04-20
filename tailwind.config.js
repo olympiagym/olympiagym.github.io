@@ -10,6 +10,7 @@ module.exports = {
         serif: ["IBM Plex Serif", ...defaultTheme.fontFamily.serif],
       },
       colors: {
+        accent: '#bfaf48',
       },
       backgroundImage: (theme) => ({
         "hero-bg": "url('/static/jelmer-assink-gzeTjGu3b_k-unsplash.jpg')",
