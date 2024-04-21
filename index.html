@@ -19,9 +19,9 @@
   <body class="bg-gray-100">
     <header class="absolute inset-x-0 top-0 z-50">
       <nav
-        class="flex items-center justify-between p-6 px-8"
+        class="flex items-center justify-between flex-wrap xs:flex-nowrap p-6 px-8 whitespace-nowrap"
         aria-label="Global">
-        <div class="flex flex-1">
+        <div class="flex grow shrink-0 basis-1/3">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Olympia Gym</span>
             <img
@@ -30,13 +30,13 @@
               alt="" />
           </a>
         </div>
-        <div class="flex gap-x-12">
+        <div class="flex gap-x-12 max-xs:order-last max-xs:basis-full max-xs:justify-around">
           <a href="#clenstvi" class="text-sm font-semibold leading-6 text-white"
             >Členství</a
           >
           <a href="#faq" class="text-sm font-semibold leading-6 text-white">FAQ</a>
         </div>
-        <div class="flex justify-end flex-1">
+        <div class="flex justify-end grow shrink-0 basis-1/3">
           <a href="https://billing.stripe.com/p/login/test_7sI4jJdxD6Px6e4bII" class="text-sm font-semibold leading-6 text-white"
             >Správa členství<span aria-hidden="true">&rarr;</span></a
           >
