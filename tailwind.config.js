@@ -16,6 +16,10 @@ module.exports = {
         "hero-bg": "url('/static/jelmer-assink-gzeTjGu3b_k-unsplash.jpg')",
       }),
     },
+    screens: {
+      xs: "550px",
+      ...defaultTheme.screens,
+    },
   },
   variants: {},
   plugins: [],
