@@ -16,7 +16,8 @@ module.exports = {
         accent: '#bfaf48',
       },
       backgroundImage: (theme) => ({
-        "hero-bg": "url('/static/jelmer-assink-gzeTjGu3b_k-unsplash.jpg')",
+        "hero-bg": "url('/static/images/gym/hero.jpeg')",
+        "hero-bg-mobile": "url('/static/images/gym/hero-mobile.jpeg')",
       }),
     },
     screens: {
