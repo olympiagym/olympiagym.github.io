@@ -1,466 +1,440 @@
 <!doctype html>
 <html lang="cs">
-  <head>
-    <meta charset="utf-8" />
-    <title>Olympia Gym</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="/static/output.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet" />
-    <link rel="icon" href="/static/images/favicon.png" />
-    <meta name="description" content="Olympia Gym - fitness pro zaneprázdněné." />
-    <meta property="og:title" content="Olympia Gym" />
-    <meta property="og:description" content="Olympia Gym - fitness pro zaneprázdněné." />
-    <meta property="og:image" content="/static/images/og_image.png" />
-    <meta property="og:url" content="https://olympiagym.cz" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Olympia Gym" />
-    <meta property="og:locale" content="cs_CZ" />
-    <meta property="og:image:type" content="image/.png" />
-    <meta property="og:image:width" content="1084" />
-    <meta property="og:image:height" content="703" />
-  </head>
 
-  <body class="bg-gray-100">
-    <header class="absolute inset-x-0 top-0 z-50">
-      <nav
-        class="flex flex-wrap items-center justify-between p-6 px-8 xs:flex-nowrap whitespace-nowrap"
-        aria-label="Global">
-        <div class="flex grow shrink-0 basis-1/3">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Olympia Gym</span>
-            <img
-              class="w-auto h-8"
-              src="/static/images/favicon.png"
-              alt="" />
-          </a>
-        </div>
-        <div class="flex gap-x-12 max-xs:order-last max-xs:basis-full max-xs:justify-around">
-          <a href="#clenstvi" class="text-sm font-semibold leading-6 text-white"
-            >Členství</a
-          >
-          <a href="#gallery" class="text-sm font-semibold leading-6 text-white">Galerie</a>
-          <a href="#faq" class="text-sm font-semibold leading-6 text-white">FAQ</a>
-        </div>
-        <div class="flex justify-end grow shrink-0 basis-1/3">
-          <a href="https://billing.stripe.com/p/login/4gw4k7dK80WC6Z2eUU" class="text-sm font-semibold leading-6 text-white"
-            >Správa členství<span aria-hidden="true">&rarr;</span></a
-          >
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <title>Olympia Gym</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="/static/output.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="/static/images/favicon.png" />
+  <meta name="description" content="Olympia Gym - fitness pro zaneprázdněné." />
+  <meta property="og:title" content="Olympia Gym" />
+  <meta property="og:description" content="Olympia Gym - fitness pro zaneprázdněné." />
+  <meta property="og:image" content="/static/images/og_image.png" />
+  <meta property="og:url" content="https://olympiagym.cz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Olympia Gym" />
+  <meta property="og:locale" content="cs_CZ" />
+  <meta property="og:image:type" content="image/.png" />
+  <meta property="og:image:width" content="1084" />
+  <meta property="og:image:height" content="703" />
+</head>
 
-    <section class="relative min-h-screen" id="hero">
-      <div class="absolute inset-0 bg-center bg-cover bg-hero-bg-mobile md:bg-hero-bg">
+<body class="bg-gray-100">
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex flex-wrap items-center justify-between p-6 px-8 xs:flex-nowrap whitespace-nowrap"
+      aria-label="Global">
+      <div class="flex grow shrink-0 basis-1/3">
+        <a href="/" class="-m-1.5 p-1.5">
+          <span class="sr-only">Olympia Gym</span>
+          <img class="w-auto h-8" src="/static/images/favicon.png" alt="" />
+        </a>
+      </div>
+      <div class="flex gap-x-2 md:gap-x-12 max-xs:order-last max-xs:basis-full max-xs:justify-around">
+        <a href="index.html#clenstvi" class="text-sm font-semibold leading-6 text-white">Členství</a>
+        <a href="index.html#gallery" class="text-sm font-semibold leading-6 text-white">Galerie</a>
+        <a href="index.html#faq" class="text-sm font-semibold leading-6 text-white">FAQ</a>
+        <a href="rules.html" class="text-sm font-semibold leading-6 text-white">Provozní řád</a>
+      </div>
+      <div class="flex justify-end grow shrink-0 basis-1/3">
+        <a href="https://billing.stripe.com/p/login/4gw4k7dK80WC6Z2eUU"
+          class="text-sm font-semibold leading-6 text-white">Správa členství<span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="relative min-h-screen" id="hero">
+    <div class="absolute inset-0 bg-center bg-cover bg-hero-bg-mobile md:bg-hero-bg">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/30 to-black/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-2xl py-32 mx-auto sm:py-48 lg:py-56">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          Olympia Gym
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          Fitness 24/7
+        </p>
+        <div class="flex items-center justify-center mt-10 gap-x-6">
+          <a href="#clenstvi"
+            class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Stát
+            se členem</a>
+          <a href="#o-nas" class="text-sm font-semibold leading-6 text-white">Zjistit více. <span
+              aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-24 sm:py-16 lg:px-8" id="o-nas">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        Jsme první fitness klub v Ostravě s provozem 24/7.
+      </h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        Přijď cvičit kdykoliv se to hodí, ne, kdy je otevřeno.
+      </p>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 sm:py-8 lg:px-8" id="gallery">
+    <div class="container h-full py-6 mx-auto sm:py-8 lg:py-12">
+      <div class="flex items-center justify-between gap-8 mb-4 sm:mb-8 md:mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">Jak to u nás vypadá</h2>
+
+        <a href="https://www.instagram.com/olympiagymcz/"
+          class="inline-flex items-center px-4 py-2 text-sm font-semibold text-center text-gray-500 transition duration-100 bg-white border rounded-lg outline-none dark:bg-gray-700 dark:border-none dark:text-gray-200 ring-indigo-300 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base">
+          Instagram
+          <svg class="w-6 h-6 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+        <!-- image - start -->
         <div
-          class="absolute inset-0 bg-gradient-to-r from-black/30 to-black/60"></div>
-      </div>
+          class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 md:h-auto md:row-span-2 group">
+          <img src="static/images/gym/cardio.jpeg" loading="lazy" alt="kardio zona"
+            class="absolute inset-0 object-cover object-center w-full h-full" />
 
-      <div class="relative z-10 max-w-2xl py-32 mx-auto sm:py-48 lg:py-56">
-        <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Olympia Gym
-          </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-300">
-            Fitness 24/7
-          </p>
-          <div class="flex items-center justify-center mt-10 gap-x-6">
-            <a
-              href="#clenstvi"
-              class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-              >Stát se členem</a
-            >
-            <a href="#o-nas" class="text-sm font-semibold leading-6 text-white"
-              >Zjistit více. <span aria-hidden="true">→</span></a
-            >
-          </div>
+          <!--<span class="relative inline-block mb-3 ml-4 text-sm text-white md:ml-5 md:text-lg">Kardio zóna</span>-->
         </div>
-      </div>
-    </section>
+        <!-- image - end -->
 
-    <section class="px-6 py-24 sm:py-16 lg:px-8" id="o-nas">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Jsme první fitness klub v Ostravě s provozem 24/7.
-        </h2>
-        <p class="mt-6 text-lg leading-8 text-gray-600">
-          Přijď cvičit kdykoliv se to hodí, ne, kdy je otevřeno.
-        </p>
-      </div>
-    </section>
-
-    <section class="px-6 py-16 sm:py-8 lg:px-8" id="gallery">
-      <div class="container h-full py-6 mx-auto sm:py-8 lg:py-12">
-          <div class="flex items-center justify-between gap-8 mb-4 sm:mb-8 md:mb-12">
-              <h2 class="text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">Jak to u nás vypadá</h2>
-
-              <a href="https://www.instagram.com/olympiagymcz/"
-                  class="inline-flex items-center px-4 py-2 text-sm font-semibold text-center text-gray-500 transition duration-100 bg-white border rounded-lg outline-none dark:bg-gray-700 dark:border-none dark:text-gray-200 ring-indigo-300 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base">
-                  Instagram
-                  <svg
-                    class="w-6 h-6 ml-2"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true">
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                      clip-rule="evenodd" />
-                  </svg>
-              </a>
-          </div>
-
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
-              <!-- image - start -->
-              <div
-                  class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 md:h-auto md:row-span-2 group">
-                 <img src="static/images/gym/cardio.jpeg" loading="lazy" alt="kardio zona" class="absolute inset-0 object-cover object-center w-full h-full" />
-
-                <!--<span class="relative inline-block mb-3 ml-4 text-sm text-white md:ml-5 md:text-lg">Kardio zóna</span>-->
-              </div>
-              <!-- image - end -->
-
-              <!-- image - start -->
-              <div
-                  class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-                  <img src="static/images/gym/dumbells2.jpeg" loading="lazy" alt="jednoručky" class="absolute inset-0 object-cover object-center w-full h-full" />
-
-                </div>
-              <!-- image - end -->
-
-              <!-- image - start -->
-              <div
-                  class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-                  <img src="static/images/gym/barbells.jpeg" loading="lazy" alt="obouručky" class="absolute inset-0 object-cover object-center w-full h-full" />
-
-                </div>
-              <!-- image - end -->
-
-              <!-- image - start -->
-              <div
-                  class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-                  <img src="static/images/gym/squat.jpeg" loading="lazy" alt="dřepy" class="absolute inset-0 object-cover object-center w-full h-full" />
-
-                </div>
-              <!-- image - end -->
-
-              <!-- image - start -->
-              <div
-                  class="relative flex items-end row-span-2 overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group md:h-auto">
-                  <img src="static/images/gym/legpress.jpeg" loading="lazy" alt="roznožování a znožování" class="absolute inset-0 object-cover object-center w-full h-full" />
-                </div>
-              <!-- image - end -->
-
-              <!-- image - start -->
-              <div
-                  class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-                  <img src="static/images/gym/multipress.jpeg" loading="lazy" alt="multipress" class="absolute inset-0 object-cover object-center w-full h-full" />
-
-                </div>
-              <!-- image - end -->
-
-              <!-- image - start -->
-              <div
-                  class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-                  <img src="static/images/gym/legs.jpeg" loading="lazy" alt="roznožování a snožování" class="absolute inset-0 object-cover object-center w-full h-full" />
-
-                </div>
-              <!-- image - end -->
-
+        <!-- image - start -->
+        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
+          <img src="static/images/gym/dumbells2.jpeg" loading="lazy" alt="jednoručky"
+            class="absolute inset-0 object-cover object-center w-full h-full" />
 
         </div>
-      </div>
-    </section>
+        <!-- image - end -->
 
-    <section class="py-24sm:py-32" id="clenstvi">
-      <div class="px-6 mx-auto max-w-7xl lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-base font-semibold leading-7 text-indigo-600">
-            Možnosti členství
-          </h2>
-          <p
-            class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Vstupné pro každého
-          </p>
+        <!-- image - start -->
+        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
+          <img src="static/images/gym/barbells.jpeg" loading="lazy" alt="obouručky"
+            class="absolute inset-0 object-cover object-center w-full h-full" />
+
         </div>
-        <p
-          class="max-w-2xl mx-auto mt-6 text-lg leading-8 text-center text-gray-600">
-          Jsme privátní fitness centrum, které je otevřeno 24/7. Abychom mohli nabídnout maximální pohodlí a bezpečí,
-          neumožňujeme vstup do centra bez předchozí registrace a zaplacení členství. Díky tomu můžeme zajistit, že
-          fitness centrum nebude přeplněné a bude dostatek prostoru pro všechny.
-        </p>
+        <!-- image - end -->
+
+        <!-- image - start -->
+        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
+          <img src="static/images/gym/squat.jpeg" loading="lazy" alt="dřepy"
+            class="absolute inset-0 object-cover object-center w-full h-full" />
+
+        </div>
+        <!-- image - end -->
+
+        <!-- image - start -->
         <div
-          class="grid max-w-md grid-cols-1 mx-auto mt-16 isolate gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          <div
-            class="flex flex-col justify-between p-8 bg-white rounded-3xl ring-1 ring-gray-200 xl:p-10 lg:mt-8 lg:rounded-r-none">
-            <div>
-              <div class="flex items-center justify-between gap-x-4">
-                <h3
-                  id="tier-single-entry"
-                  class="text-lg font-semibold leading-8 text-gray-900">
-                  Členství na jeden den
-                </h3>
-              </div>
-              <p class="mt-4 text-sm leading-6 text-gray-600">Pokud si nejste jistí a chcete nás jen vyzkoušet..</p>
-              <p class="flex items-baseline mt-6 gap-x-1">
-                <span class="text-4xl font-bold tracking-tight text-gray-900"
-                  >200 Kč</span
-                >
-              </p>
-              <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Vstup Vám bude umožněn po předchozí telefonické domluvě.
-                </li>
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Vstup na zkoušku.
-                </li>
-              </ul>
-            </div>
-            <a
-              href="https://buy.stripe.com/3csdRvfv02QpfhmdQS"
-              aria-describedby="tier-freelancer"
-              class="block px-3 py-2 mt-8 text-sm font-semibold leading-6 text-center text-indigo-600 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300"
-              >Stát se členem</a
-            >
-          </div>
-          <div
-            class="flex flex-col justify-between p-8 bg-white rounded-3xl ring-1 ring-gray-200 xl:p-10 lg:z-10 lg:rounded-b-none">
-            <div>
-              <div class="flex items-center justify-between gap-x-4">
-                <h3
-                  id="tier-quarterly"
-                  class="text-lg font-semibold leading-8 text-indigo-600">
-                  3 měsíční členství
-                </h3>
-                <p
-                  class="rounded-full bg-indigo-600/10 px-2.5 py-1 text-xs font-semibold leading-5 text-indigo-600">
-                  Nejvýhodnější
-                </p>
-              </div>
-              <p class="mt-4 text-sm leading-6 text-gray-600">
-                Pro každého kdo to s cvičením myslí vážně.
-              </p>
-              <p class="flex items-baseline mt-6 gap-x-1">
-                <span class="text-4xl font-bold tracking-tight text-gray-900"
-                  >3 299 Kč</span
-                >
-                <span class="text-sm font-semibold leading-6 text-gray-600"
-                  >/3 měsíce</span
-                >
-              </p>
-              <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Platí po dobu 3 měsíců od zakoupení. <br> Účtuje se po 3 měsících.
-                </li>
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Samoobslužný vstup.
-                </li>
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Pokud se vám u nás nebude líbit, <br> můžete do 24 hodin zrušit členství bez jakéhokoli poplatku.
-                </li>
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Členství lze kdykoliv zrušit, další 3 měsíce se již neúčtují.
-                </li>
-              </ul>
-            </div>
-            <a
-              href="https://buy.stripe.com/4gwcNr6Yu2Qp3yEaEF"
-              aria-describedby="tier-startup"
-              class="block px-3 py-2 mt-8 text-sm font-semibold leading-6 text-center text-white bg-indigo-600 rounded-md shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-indigo-500"
-              >Stát se členem</a
-            >
-          </div>
-          <div
-            class="flex flex-col justify-between p-8 bg-white rounded-3xl ring-1 ring-gray-200 xl:p-10 lg:mt-8 lg:rounded-l-none">
-            <div>
-              <div class="flex items-center justify-between gap-x-4">
-                <h3
-                  id="tier-monthly"
-                  class="text-lg font-semibold leading-8 text-gray-900">
-                  Měsíční členství
-                </h3>
-              </div>
-              <p class="mt-4 text-sm leading-6 text-gray-600">
-                Měsíční členství bez závazků
-              </p>
-              <p class="flex items-baseline mt-6 gap-x-1">
-                <span class="text-4xl font-bold tracking-tight text-gray-900"
-                  >1 299 Kč</span
-                >
-                <span class="text-sm font-semibold leading-6 text-gray-600"
-                  >/měsíc</span
-                >
-              </p>
-              <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Platí po měsíc od zakoupení. <br> Účtuje se po měsíci.
-                </li>
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Samoobslužný vstup.
-                </li>
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Pokud se vám u nás nebude líbit, <br> můžete do 24 hodin zrušit členství bez jakéhokoli poplatku.
-                </li>
-                <li class="flex gap-x-3">
-                  <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                  </svg>
-                  Členství lze kdykoliv zrušit, další měsíc se již neúčtuje.
-                </li>
-              </ul>
-            </div>
-            <a
-              href="https://buy.stripe.com/eVa28N1Eadv31qwbII"
-              aria-describedby="tier-enterprise"
-              class="block px-3 py-2 mt-8 text-sm font-semibold leading-6 text-center text-indigo-600 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300"
-              >Stát se členem</a
-            >
-          </div>
+          class="relative flex items-end row-span-2 overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group md:h-auto">
+          <img src="static/images/gym/legpress.jpeg" loading="lazy" alt="roznožování a znožování"
+            class="absolute inset-0 object-cover object-center w-full h-full" />
         </div>
-      </div>
-    </section>
+        <!-- image - end -->
 
-    <section id="faq">
-      <div class="px-6 py-16 mx-auto max-w-7xl sm:py-24 lg:px-8">
-        <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-          Často kladené otázky
+        <!-- image - start -->
+        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
+          <img src="static/images/gym/multipress.jpeg" loading="lazy" alt="multipress"
+            class="absolute inset-0 object-cover object-center w-full h-full" />
+
+        </div>
+        <!-- image - end -->
+
+        <!-- image - start -->
+        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
+          <img src="static/images/gym/legs.jpeg" loading="lazy" alt="roznožování a snožování"
+            class="absolute inset-0 object-cover object-center w-full h-full" />
+
+        </div>
+        <!-- image - end -->
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24sm:py-32" id="clenstvi">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-base font-semibold leading-7 text-indigo-600">
+          Možnosti členství
         </h2>
-        <p class="max-w-2xl mt-6 text-base leading-7 text-gray-600">
-          Není zde odpovězeno vše? Kontaktujte nás
-          <a
-            href="mailto:olympiagymcz@gmail.com?subject=Olympia Gym - dotaz z webu"
-            class="font-semibold text-indigo-600 hover:text-indigo-500"
-            >na email</a
-          >
-          a my se ozveme tak rychle jak zvládneme.
+        <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Vstupné pro každého
         </p>
-        <div class="mt-20">
-          <dl
-            class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10">
-            <div>
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                Jak to funguje?
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">
-                Po zaplacení členství obdržíte email s potvrzením o zaplacení.
-                Následně se vám na telefonní číslo uvedené při registraci ozve člen
-                personálu a domluví sí s vámi na osobním setkání. V rámci osobního
-                setkání vám bude vydán čip, kterým se budete přihlašovat do fitness centra.
-              </dd>
-            </div>
-            <div>
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                Kde je obsluha?
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">
-                Olympia Gym funguje bez obsluhy. V prostoru fitness centra se
-                přes den pohybují trenéři, ale jinak je prostor bez obsluhy.
-              </dd>
-            </div>
-            <div>
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                Kdo mi ohlídá věci?
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">
-                Do prostor fitness centra se lze dostat pouze s platným členstvím.
-                Navíc je prostor monitorován kamerami se záznamem, který bude v případě potřeby poskytnut policii.
-              </dd>
-            </div>
-            <div>
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                Nebude mi někdo funět za krk?
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">
-                Počet členů přítomných uvnitř je omezen. Díky tomu fitness
-                centrum nikdy není přeplněné.
-              </dd>
-            </div>
-            <div>
-              <dt class="text-base font-semibold leading-7 text-gray-900">
-                Jsou kamery i v šatnách a sprchách?
-              </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">
-                Nejsou. Všechny ostatní prostory jsou však monitorovány
-                kamerami.
-              </dd>
-            </div>
-            <!-- More questions... -->
-          </dl>
-        </div>
       </div>
-    </section>
-
-    <footer>
+      <p class="max-w-2xl mx-auto mt-6 text-lg leading-8 text-center text-gray-600">
+        Jsme privátní fitness centrum, které je otevřeno 24/7. Abychom mohli nabídnout maximální pohodlí a bezpečí,
+        neumožňujeme vstup do centra bez předchozí registrace a zaplacení členství. Díky tomu můžeme zajistit, že
+        fitness centrum nebude přeplněné a bude dostatek prostoru pro všechny.
+      </p>
       <div
-        class="px-6 py-12 mx-auto max-w-7xl md:flex md:items-center md:justify-between lg:px-8">
-        <div class="flex justify-center space-x-6 md:order-2">
-          <a href="https://www.instagram.com/olympiagymcz/" class="text-gray-400 hover:text-gray-500">
-            <span class="sr-only">Instagram</span>
-            <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true">
-              <path
-                fill-rule="evenodd"
-                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-          <a href="#" class="text-gray-400 hover:text-gray-500">
-            <span class="sr-only">YouTube</span>
-            <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true">
-              <path
-                fill-rule="evenodd"
-                d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
+        class="grid max-w-md grid-cols-1 mx-auto mt-16 isolate gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div
+          class="flex flex-col justify-between p-8 bg-white rounded-3xl ring-1 ring-gray-200 xl:p-10 lg:mt-8 lg:rounded-r-none">
+          <div>
+            <div class="flex items-center justify-between gap-x-4">
+              <h3 id="tier-single-entry" class="text-lg font-semibold leading-8 text-gray-900">
+                Členství na jeden den
+              </h3>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-gray-600">Pokud si nejste jistí a chcete nás jen vyzkoušet..</p>
+            <p class="flex items-baseline mt-6 gap-x-1">
+              <span class="text-4xl font-bold tracking-tight text-gray-900">200 Kč</span>
+            </p>
+            <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Vstup Vám bude umožněn po předchozí telefonické domluvě.
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Vstup na zkoušku.
+              </li>
+            </ul>
+          </div>
+          <a href="https://buy.stripe.com/3csdRvfv02QpfhmdQS" aria-describedby="tier-freelancer"
+            class="block px-3 py-2 mt-8 text-sm font-semibold leading-6 text-center text-indigo-600 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300">Stát
+            se členem</a>
         </div>
-        <div class="mt-8 md:order-1 md:mt-0">
-          <a class="text-xs leading-5 text-center text-gray-500 underline hover:text-purple-600" href="https://en.mapy.cz/s/luhovaroga">
-            &copy; 2024 OlympiaGym s.r.o., Ludvíka Podéště 1974/25, Ostrava - Poruba, 708 00
-            Ostrava, IČO 21316341
-          </a>
+        <div
+          class="flex flex-col justify-between p-8 bg-white rounded-3xl ring-1 ring-gray-200 xl:p-10 lg:z-10 lg:rounded-b-none">
+          <div>
+            <div class="flex items-center justify-between gap-x-4">
+              <h3 id="tier-quarterly" class="text-lg font-semibold leading-8 text-indigo-600">
+                3 měsíční členství
+              </h3>
+              <p class="rounded-full bg-indigo-600/10 px-2.5 py-1 text-xs font-semibold leading-5 text-indigo-600">
+                Nejvýhodnější
+              </p>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-gray-600">
+              Pro každého kdo to s cvičením myslí vážně.
+            </p>
+            <p class="flex items-baseline mt-6 gap-x-1">
+              <span class="text-4xl font-bold tracking-tight text-gray-900">3 299 Kč</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600">/3 měsíce</span>
+            </p>
+            <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Platí po dobu 3 měsíců od zakoupení. <br> Účtuje se po 3 měsících.
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Samoobslužný vstup.
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Pokud se vám u nás nebude líbit, <br> můžete do 24 hodin zrušit členství bez jakéhokoli poplatku.
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Členství lze kdykoliv zrušit, další 3 měsíce se již neúčtují.
+              </li>
+            </ul>
+          </div>
+          <a href="https://buy.stripe.com/4gwcNr6Yu2Qp3yEaEF" aria-describedby="tier-startup"
+            class="block px-3 py-2 mt-8 text-sm font-semibold leading-6 text-center text-white bg-indigo-600 rounded-md shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-indigo-500">Stát
+            se členem</a>
+        </div>
+        <div
+          class="flex flex-col justify-between p-8 bg-white rounded-3xl ring-1 ring-gray-200 xl:p-10 lg:mt-8 lg:rounded-l-none">
+          <div>
+            <div class="flex items-center justify-between gap-x-4">
+              <h3 id="tier-monthly" class="text-lg font-semibold leading-8 text-gray-900">
+                Měsíční členství
+              </h3>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-gray-600">
+              Měsíční členství bez závazků
+            </p>
+            <p class="flex items-baseline mt-6 gap-x-1">
+              <span class="text-4xl font-bold tracking-tight text-gray-900">1 299 Kč</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600">/měsíc</span>
+            </p>
+            <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600">
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Platí po měsíc od zakoupení. <br> Účtuje se po měsíci.
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Samoobslužný vstup.
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Pokud se vám u nás nebude líbit, <br> můžete do 24 hodin zrušit členství bez jakéhokoli poplatku.
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="flex-none w-5 h-6 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Členství lze kdykoliv zrušit, další měsíc se již neúčtuje.
+              </li>
+            </ul>
+          </div>
+          <a href="https://buy.stripe.com/eVa28N1Eadv31qwbII" aria-describedby="tier-enterprise"
+            class="block px-3 py-2 mt-8 text-sm font-semibold leading-6 text-center text-indigo-600 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300">Stát
+            se členem</a>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="px-6 py-16 mx-auto max-w-7xl sm:py-24 lg:px-8">
+      <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">
+        Často kladené otázky
+      </h2>
+      <p class="max-w-2xl mt-6 text-base leading-7 text-gray-600">
+        Není zde odpovězeno vše? Kontaktujte nás
+        <a href="mailto:olympiagymcz@gmail.com?subject=Olympia Gym - dotaz z webu"
+          class="font-semibold text-indigo-600 hover:text-indigo-500">na email</a>
+        a my se ozveme tak rychle jak zvládneme.
+      </p>
+      <div class="mt-20">
+        <dl class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10">
+          <div>
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              Jak to funguje?
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">
+              Po zaplacení členství obdržíte email s potvrzením o zaplacení.
+              Následně se vám na telefonní číslo uvedené při registraci ozve člen
+              personálu a domluví sí s vámi na osobním setkání. V rámci osobního
+              setkání vám bude vydán čip, kterým se budete přihlašovat do fitness centra.
+            </dd>
+          </div>
+          <div>
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              Kde je obsluha?
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">
+              Olympia Gym funguje bez obsluhy. V prostoru fitness centra se
+              přes den pohybují trenéři, ale jinak je prostor bez obsluhy.
+            </dd>
+          </div>
+          <div>
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              Kdo mi ohlídá věci?
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">
+              Do prostor fitness centra se lze dostat pouze s platným členstvím.
+              Navíc je prostor monitorován kamerami se záznamem, který bude v případě potřeby poskytnut policii.
+            </dd>
+          </div>
+          <div>
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              Nebude mi někdo funět za krk?
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">
+              Počet členů přítomných uvnitř je omezen. Díky tomu fitness
+              centrum nikdy není přeplněné.
+            </dd>
+          </div>
+          <div>
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              Jsou kamery i v šatnách a sprchách?
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">
+              Nejsou. Všechny ostatní prostory jsou však monitorovány
+              kamerami.
+            </dd>
+          </div>
+          <!-- More questions... -->
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="px-6 py-12 mx-auto max-w-7xl md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-6 md:order-2">
+        <a href="https://www.instagram.com/olympiagymcz/" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Instagram</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">YouTube</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+      <div class="mt-8 md:order-1 md:mt-0">
+        <a class="text-xs leading-5 text-center text-gray-500 underline hover:text-purple-600"
+          href="https://en.mapy.cz/s/luhovaroga">
+          &copy; 2024 OlympiaGym s.r.o., Ludvíka Podéště 1974/25, Ostrava - Poruba, 708 00
+          Ostrava, IČO 21316341
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

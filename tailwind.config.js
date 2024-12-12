@@ -5,6 +5,7 @@ module.exports = {
   content: [
     "./src/*.{html,js}",
     "./index.html",
+    "./rules.html"
   ],
   theme: {
     extend: {
