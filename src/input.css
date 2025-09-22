@@ -2,6 +2,25 @@
 
 @config '../tailwind.config.js';
 
+/* Brand color variables: declared here so the site can reference a single source
+   of truth at runtime. These include primary/secondary/accent and common
+   semantic colors. You can tweak these values to update the whole site
+   without rebuilding Tailwind. */
+:root {
+  --color-primary: #0f172a; /* deep navy / dark */
+  --color-primary-contrast: #ffffff;
+  --color-secondary: #6b7280; /* neutral gray */
+  --color-accent: #7c3aed; /* switched to Tailwind purple-600 */
+  --color-accent-600: #6d28d9; /* darker purple for hover */
+  --color-muted: #f3f4f6; /* light background */
+  --color-foreground: #111827; /* main text color */
+  --color-background: #ffffff;
+  --color-success: #16a34a;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #0ea5e9;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
