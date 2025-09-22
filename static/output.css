@@ -1021,9 +1021,6 @@
   .text-gray-900 {
     color: var(--color-gray-900);
   }
-  .text-indigo-600 {
-    color: var(--color-indigo-600);
-  }
   .text-white {
     color: var(--color-white);
   }
@@ -1461,8 +1458,8 @@
   --color-primary: #0f172a;
   --color-primary-contrast: #ffffff;
   --color-secondary: #6b7280;
-  --color-accent: #bfaf48;
-  --color-accent-600: #9b8b3a;
+  --color-accent: #7c3aed;
+  --color-accent-600: #6d28d9;
   --color-muted: #f3f4f6;
   --color-foreground: #111827;
   --color-background: #ffffff;

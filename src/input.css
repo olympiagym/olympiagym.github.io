@@ -10,8 +10,8 @@
   --color-primary: #0f172a; /* deep navy / dark */
   --color-primary-contrast: #ffffff;
   --color-secondary: #6b7280; /* neutral gray */
-  --color-accent: #bfaf48; /* existing gold accent */
-  --color-accent-600: #9b8b3a;
+  --color-accent: #7c3aed; /* switched to Tailwind purple-600 */
+  --color-accent-600: #6d28d9; /* darker purple for hover */
   --color-muted: #f3f4f6; /* light background */
   --color-foreground: #111827; /* main text color */
   --color-background: #ffffff;
