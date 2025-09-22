@@ -1117,13 +1117,6 @@
       }
     }
   }
-  .hover\:bg-accent\/5 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: color-mix(in oklab, var(--color-accent, #bfaf48) 5%, transparent);
-      }
-    }
-  }
   .hover\:bg-gray-100 {
     &:hover {
       @media (hover: hover) {
