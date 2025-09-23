@@ -32,8 +32,8 @@ module.exports = {
         info: 'var(--color-info, #0ea5e9)',
       },
       backgroundImage: (theme) => ({
-        "hero-bg": "url('/static/images/gym/hero.jpeg')",
-        "hero-bg-mobile": "url('/static/images/gym/hero-mobile.jpeg')",
+        "hero-bg": "url('/static/images/gym/smart-mirror.jpeg')",
+        "hero-bg-mobile": "url('/static/images/gym/smart-mirror-mobile.jpeg')",
       }),
     },
     screens: {

@@ -864,7 +864,7 @@
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .bg-hero-bg-mobile {
-    background-image: url('/static/images/gym/hero-mobile.jpeg');
+    background-image: url('/static/images/gym/smart-mirror-mobile.jpeg');
   }
   .from-black\/30 {
     --tw-gradient-from: color-mix(in oklab, var(--color-black) 30%, transparent);
@@ -1351,7 +1351,7 @@
   }
   .md\:bg-hero-bg {
     @media (width >= 48rem) {
-      background-image: url('/static/images/gym/hero.jpeg');
+      background-image: url('/static/images/gym/smart-mirror.jpeg');
     }
   }
   .md\:px-8 {
