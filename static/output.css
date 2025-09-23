@@ -1256,11 +1256,6 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .max-xs\:justify-around {
-    @media (width < 550px) {
-      justify-content: space-around;
-    }
-  }
   .max-xs\:text-center {
     @media (width < 550px) {
       text-align: center;
@@ -1445,11 +1440,6 @@
   .md\:gap-6 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 6);
-    }
-  }
-  .md\:gap-x-12 {
-    @media (width >= 48rem) {
-      column-gap: calc(var(--spacing) * 12);
     }
   }
   .md\:bg-hero-bg {
