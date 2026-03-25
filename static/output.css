@@ -1528,6 +1528,16 @@
       margin-top: calc(var(--spacing) * 20);
     }
   }
+  .lg\:min-h-16 {
+    @media (width >= 64rem) {
+      min-height: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:min-h-20 {
+    @media (width >= 64rem) {
+      min-height: calc(var(--spacing) * 20);
+    }
+  }
   .lg\:max-w-4xl {
     @media (width >= 64rem) {
       max-width: var(--container-4xl);
