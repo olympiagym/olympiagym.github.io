@@ -1384,11 +1384,6 @@
       padding-block: calc(var(--spacing) * 24);
     }
   }
-  .sm\:py-32 {
-    @media (width >= 40rem) {
-      padding-block: calc(var(--spacing) * 32);
-    }
-  }
   .sm\:py-48 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 48);
