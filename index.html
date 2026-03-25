@@ -601,6 +601,42 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      function getQueryParam(param) {
+        const queryString = window.location.search.substring(1);
+        const params = queryString.split('&');
+        for (var i = 0; i < params.length; i++) {
+          var pair = params[i].split('=');
+          if (pair[0] === param) {
+            return decodeURIComponent(pair[1]);
+          }
+        }
+        return null;
+      }
+
+      var clid = getQueryParam('clid');
+
+      if (clid) {
+        var membershipButtons = [
+          { selector: 'a[aria-describedby="tier-freelancer"]', conversionId: 'single_day_entry' },
+          { selector: 'a[aria-describedby="tier-single-entry-trainer"]', conversionId: 'trainer_session' },
+          { selector: 'a[aria-describedby="tier-enterprise"]', conversionId: 'monthly_membership' },
+        ];
+
+        membershipButtons.forEach(function (item) {
+          var btn = document.querySelector(item.selector);
+          if (btn) {
+            btn.addEventListener('click', function () {
+              var conversionURL = 'https://go.olympiagym.cz/.shortio/conversion?c=' + item.conversionId + '&clid=' + clid;
+              navigator.sendBeacon(conversionURL);
+            });
+          }
+        });
+      }
+    })();
+  </script>
+
   <button id="to-top-button" onclick="goToTop()" title="Go To Top"
     class="fixed z-50 hidden p-4 text-lg font-semibold text-white transition-colors duration-300 border-0 rounded-full shadow-md bg-accent bottom-10 left-10 w-14 h-14 hover:bg-accent-600">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
