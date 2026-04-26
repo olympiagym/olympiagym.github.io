@@ -79,24 +79,19 @@
     </nav>
   </header>
 
-  <section class="relative min-h-screen" id="hero">
-    <div class="absolute inset-0 bg-center bg-cover bg-hero-bg-mobile md:bg-hero-bg">
-      <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-black/70"></div>
-    </div>
-
-    <div class="relative z-10 max-w-2xl py-32 mx-auto sm:py-48 lg:py-56">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-          Olympia Gym
+  <section class="min-h-screen hero" id="hero"
+    style="background-image: url('/static/images/gym/hero.jpeg'); background-position: center; background-size: cover;">
+    <div class="hero-overlay bg-black/60"></div>
+    <div class="text-center hero-content text-neutral-content">
+      <div class="max-w-3xl px-4 lg:max-w-none">
+        <h1 class="text-4xl font-bold leading-tight sm:text-6xl lg:whitespace-nowrap">
+          Private Fitness 24/7 in Ostrava
         </h1>
-        <p class="mt-6 text-lg leading-8 text-gray-300">
-          Fitness 24/7
+        <p class="mt-6 text-lg leading-8 text-gray-100 sm:text-xl">
+          Absolute privacy and freedom. Work out anytime, no waiting.
         </p>
-        <div class="flex items-center justify-center mt-10 gap-x-6">
-          <a href="#clenstvi"
-            class="rounded-md bg-accent px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-accent-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600">Membership from 333 CZK/week</a>
-          <a href="#o-nas" class="text-sm font-semibold leading-6 text-white">Learn more. <span
-              aria-hidden="true">→</span></a>
+        <div class="mt-10">
+          <a href="#clenstvi" class="btn btn-primary btn-lg">View pricing</a>
         </div>
       </div>
     </div>
