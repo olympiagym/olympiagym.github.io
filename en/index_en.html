@@ -622,14 +622,6 @@
     </div>
   </footer>
 
-  <button id="to-top-button" onclick="goToTop()" title="Go To Top"
-    class="fixed z-50 hidden p-4 text-lg font-semibold text-white transition-colors duration-300 border-0 rounded-full shadow-md bg-accent bottom-24 left-6 h-14 w-14 hover:bg-accent-600 sm:bottom-10 sm:left-10">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-        <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" />
-    </svg>
-    <span class="sr-only">Go to top</span>
-</button>
-
   <div class="sticky bottom-0 z-50 border-t dock border-black/10 bg-base-100/95 backdrop-blur md:hidden">
     <a href="index_en.html" aria-label="Home">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -712,29 +704,6 @@
     });
   })();
 
-  // Get the 'to top' button element by ID
-  var toTopButton = document.getElementById("to-top-button");
-
-  // Check if the button exists
-  if (toTopButton) {
-
-      // On scroll event, toggle button visibility based on scroll position
-      window.onscroll = function() {
-          if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-              toTopButton.classList.remove("hidden");
-          } else {
-              toTopButton.classList.add("hidden");
-          }
-      };
-
-      // Function to scroll to the top of the page smoothly
-      window.goToTop = function() {
-          window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-          });
-      };
-  }
 </script>
 
 <script>
