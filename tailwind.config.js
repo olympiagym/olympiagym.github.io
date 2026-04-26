@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: [
@@ -17,19 +16,21 @@ module.exports = {
       colors: {
         // brand / semantic colors
         primary: {
-          DEFAULT: 'var(--color-primary, #0f172a)',
-          contrast: 'var(--color-primary-contrast, #ffffff)'
+          DEFAULT: 'var(--color-primary)',
+          contrast: 'var(--color-primary-contrast)'
         },
-        secondary: 'var(--color-secondary, #6b7280)',
-        accent: 'var(--color-accent, #bfaf48)',
-        'accent-600': 'var(--color-accent-600, #9b8b3a)',
-        muted: 'var(--color-muted, #f3f4f6)',
-        foreground: 'var(--color-foreground, #111827)',
-        background: 'var(--color-background, #ffffff)',
-        success: 'var(--color-success, #16a34a)',
-        danger: 'var(--color-danger, #ef4444)',
-        warning: 'var(--color-warning, #f59e0b)',
-        info: 'var(--color-info, #0ea5e9)',
+        secondary: 'var(--color-secondary)',
+        'secondary-light': 'var(--color-secondary-light)',
+        accent: 'var(--color-accent)',
+        'secondary-accent': 'var(--color-secondary-accent)',
+        'accent-600': 'var(--color-accent-600)',
+        muted: 'var(--color-muted)',
+        foreground: 'var(--color-foreground)',
+        background: 'var(--color-background)',
+        success: 'var(--color-success)',
+        danger: 'var(--color-danger)',
+        warning: 'var(--color-warning)',
+        info: 'var(--color-info)',
       },
       backgroundImage: (theme) => ({
         "hero-bg": "url('/static/images/gym/hero.jpeg')",

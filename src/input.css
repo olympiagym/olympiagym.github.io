@@ -8,10 +8,12 @@
    semantic colors. You can tweak these values to update the whole site
    without rebuilding Tailwind. */
 :root {
-  --color-primary: #0f172a; /* deep navy / dark */
+  --color-primary: #7c3aed; /* purple brand color for CTAs and main actions */
+  --color-primary-light: #6d28d9; /* darker purple for hover */
   --color-primary-contrast: #ffffff;
   --color-secondary: #6b7280; /* neutral gray */
-  --color-accent: #7c3aed; /* switched to Tailwind purple-600 */
+  --color-secondary-light: #b5bcc9; /* lighter gray for hover */
+  --color-accent: #bfaf48; /* switched to Tailwind purple-600 */
   --color-accent-600: #6d28d9; /* darker purple for hover */
   --color-muted: #f3f4f6; /* light background */
   --color-foreground: #111827; /* main text color */
@@ -21,6 +23,9 @@
   --color-warning: #f59e0b;
   --color-info: #0ea5e9;
 }
+
+
+
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
