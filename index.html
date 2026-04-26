@@ -113,78 +113,78 @@
     <div class="container h-full py-6 mx-auto sm:py-8 lg:py-12">
       <div class="flex items-center justify-between gap-8 mb-4 sm:mb-8 md:mb-12">
         <h2 class="text-2xl font-bold text-gray-900 lg:text-3xl">Jak to u nás vypadá</h2>
+      </div>
 
+      <div class="relative">
+        <div id="gallery-carousel" class="overflow-x-auto shadow-lg carousel carousel-center w-full rounded-box aspect-4/3 md:aspect-video bg-neutral-900/10 touch-pan-x">
+          <div id="slide1" class="justify-center w-10/12 carousel-item sm:w-11/12 md:w-8/12 lg:w-7/12">
+            <img src="static/images/gym/hero.jpeg" alt="prázdná část fitka pro soukromý trénink"
+              class="object-cover w-full h-full rounded-box" />
+          </div>
+          <div id="slide2" class="justify-center w-10/12 carousel-item sm:w-11/12 md:w-8/12 lg:w-7/12">
+            <img src="static/images/gym/cardio.jpeg" loading="lazy" alt="kardio zóna"
+              class="object-cover w-full h-full rounded-box" />
+          </div>
+          <div id="slide3" class="justify-center w-10/12 carousel-item sm:w-11/12 md:w-8/12 lg:w-7/12">
+            <img src="static/images/gym/dumbells2.jpeg" loading="lazy" alt="jednoručky"
+              class="object-cover w-full h-full rounded-box" />
+          </div>
+          <div id="slide4" class="justify-center w-10/12 carousel-item sm:w-11/12 md:w-8/12 lg:w-7/12">
+            <img src="static/images/gym/barbells.jpeg" loading="lazy" alt="obouručky"
+              class="object-cover w-full h-full rounded-box" />
+          </div>
+          <div id="slide5" class="justify-center w-10/12 carousel-item sm:w-11/12 md:w-8/12 lg:w-7/12">
+            <img src="static/images/gym/squat.jpeg" loading="lazy" alt="dřepy"
+              class="object-cover w-full h-full rounded-box" />
+          </div>
+          <div id="slide6" class="justify-center w-10/12 carousel-item sm:w-11/12 md:w-8/12 lg:w-7/12">
+            <img src="static/images/gym/legpress.jpeg" loading="lazy" alt="legpress"
+              class="object-cover w-full h-full rounded-box" />
+          </div>
+          <div id="slide7" class="justify-center w-10/12 carousel-item sm:w-11/12 md:w-8/12 lg:w-7/12">
+            <img src="static/images/gym/multipress.jpeg" loading="lazy" alt="multipress"
+              class="object-cover w-full h-full rounded-box" />
+          </div>
+          <div id="slide8" class="justify-center w-10/12 carousel-item sm:w-11/12 md:w-8/12 lg:w-7/12">
+            <img src="static/images/gym/legs.jpeg" loading="lazy" alt="roznožování a snožování"
+              class="object-cover w-full h-full rounded-box" />
+          </div>
+        </div>
+
+        <div class="absolute z-10 -translate-x-1/2 bottom-4 left-1/2">
+          <div class="px-3 py-2 rounded-full bg-black/60">
+            <div class="gap-2 carousel-indicator">
+              <button type="button" class="w-2 h-2 rounded-full bg-white/70 hover:bg-white" data-slide-index="0" aria-label="Slide 1"></button>
+              <button type="button" class="w-2 h-2 rounded-full bg-white/70 hover:bg-white" data-slide-index="1" aria-label="Slide 2"></button>
+              <button type="button" class="w-2 h-2 rounded-full bg-white/70 hover:bg-white" data-slide-index="2" aria-label="Slide 3"></button>
+              <button type="button" class="w-2 h-2 rounded-full bg-white/70 hover:bg-white" data-slide-index="3" aria-label="Slide 4"></button>
+              <button type="button" class="w-2 h-2 rounded-full bg-white/70 hover:bg-white" data-slide-index="4" aria-label="Slide 5"></button>
+              <button type="button" class="w-2 h-2 rounded-full bg-white/70 hover:bg-white" data-slide-index="5" aria-label="Slide 6"></button>
+              <button type="button" class="w-2 h-2 rounded-full bg-white/70 hover:bg-white" data-slide-index="6" aria-label="Slide 7"></button>
+              <button type="button" class="w-2 h-2 rounded-full bg-white/70 hover:bg-white" data-slide-index="7" aria-label="Slide 8"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute z-10 flex justify-between -translate-y-1/2 top-1/2 left-2 right-2 sm:left-4 sm:right-4">
+          <button type="button" class="btn btn-circle btn-xs sm:btn-sm" data-carousel-action="prev" aria-label="Předchozí slide">❮</button>
+          <button type="button" class="btn btn-circle btn-xs sm:btn-sm" data-carousel-action="next" aria-label="Další slide">❯</button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center gap-3 mt-5">
         <a href="gallery.html"
-          class="inline-flex items-center px-4 py-2 text-sm font-semibold text-center text-gray-500 transition duration-100 bg-white border rounded-lg outline-hidden ring-accent-600 hover:bg-gray-100 focus-visible:ring-3 active:bg-gray-200 md:px-8 md:py-3 md:text-base">
+          class="inline-flex items-center px-4 py-2 text-sm font-semibold text-center text-gray-700 transition duration-100 bg-white border rounded-lg outline-hidden ring-accent-600 hover:bg-gray-100 focus-visible:ring-3 active:bg-gray-200 md:px-8 md:py-3 md:text-base">
           Více
-          <svg class="w-6 h-6 ml-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        </a>
+        <a href="https://www.instagram.com/olympiagymcz/"
+          class="btn btn-circle btn-sm bg-white text-[#E1306C] border border-white hover:bg-gray-100" aria-label="Instagram Olympia Gym">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path fill-rule="evenodd"
               d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
               clip-rule="evenodd" />
           </svg>
         </a>
-      </div>
-
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
-        <!-- image - start -->
-        <div
-          class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 md:h-auto md:row-span-2 group">
-          <img src="static/images/gym/cardio.jpeg" loading="lazy" alt="kardio zóna"
-            class="absolute inset-0 object-cover object-center w-full h-full" />
-
-          <!--<span class="relative inline-block mb-3 ml-4 text-sm text-white md:ml-5 md:text-lg">Kardio zóna</span>-->
-        </div>
-        <!-- image - end -->
-
-        <!-- image - start -->
-        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-          <img src="static/images/gym/dumbells2.jpeg" loading="lazy" alt="jednoručky"
-            class="absolute inset-0 object-cover object-center w-full h-full" />
-
-        </div>
-        <!-- image - end -->
-
-        <!-- image - start -->
-        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-          <img src="static/images/gym/barbells.jpeg" loading="lazy" alt="obouručky"
-            class="absolute inset-0 object-cover object-center w-full h-full" />
-
-        </div>
-        <!-- image - end -->
-
-        <!-- image - start -->
-        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-          <img src="static/images/gym/squat.jpeg" loading="lazy" alt="dřepy"
-            class="absolute inset-0 object-cover object-center w-full h-full" />
-
-        </div>
-        <!-- image - end -->
-
-        <!-- image - start -->
-        <div
-          class="relative flex items-end row-span-2 overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group md:h-auto">
-          <img src="static/images/gym/legpress.jpeg" loading="lazy" alt="roznožování a snožování"
-            class="absolute inset-0 object-cover object-center w-full h-full" />
-        </div>
-        <!-- image - end -->
-
-        <!-- image - start -->
-        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-          <img src="static/images/gym/multipress.jpeg" loading="lazy" alt="multipress"
-            class="absolute inset-0 object-cover object-center w-full h-full" />
-
-        </div>
-        <!-- image - end -->
-
-        <!-- image - start -->
-        <div class="relative flex items-end overflow-hidden bg-gray-100 rounded-lg shadow-lg h-80 group">
-          <img src="static/images/gym/legs.jpeg" loading="lazy" alt="roznožování a snožování"
-            class="absolute inset-0 object-cover object-center w-full h-full" />
-
-        </div>
-        <!-- image - end -->
-
-
       </div>
     </div>
   </section>
@@ -741,6 +741,63 @@
 </body>
 
 <script>
+  (function () {
+    var carousel = document.getElementById('gallery-carousel');
+    if (!carousel) {
+      return;
+    }
+
+    var slides = carousel.querySelectorAll('.carousel-item');
+    var dotButtons = document.querySelectorAll('[data-slide-index]');
+    var prevButton = document.querySelector('[data-carousel-action="prev"]');
+    var nextButton = document.querySelector('[data-carousel-action="next"]');
+
+    function getClosestSlideIndex() {
+      var centerX = carousel.scrollLeft + carousel.clientWidth / 2;
+      var closestIndex = 0;
+      var minDistance = Number.MAX_VALUE;
+
+      slides.forEach(function (slide, index) {
+        var slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+        var distance = Math.abs(slideCenter - centerX);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      return closestIndex;
+    }
+
+    function goToSlide(index) {
+      if (!slides[index]) {
+        return;
+      }
+      slides[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+
+    if (prevButton) {
+      prevButton.addEventListener('click', function () {
+        var index = getClosestSlideIndex();
+        goToSlide((index - 1 + slides.length) % slides.length);
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', function () {
+        var index = getClosestSlideIndex();
+        goToSlide((index + 1) % slides.length);
+      });
+    }
+
+    dotButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var index = Number(button.getAttribute('data-slide-index'));
+        goToSlide(index);
+      });
+    });
+  })();
+
   // Get the 'to top' button element by ID
   var toTopButton = document.getElementById("to-top-button");
 
