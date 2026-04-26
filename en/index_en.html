@@ -206,7 +206,7 @@
               <li>24/7 access</li>
             </ul>
             <div class="mt-6 card-actions">
-              <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" class="w-full text-white border-0 btn bg-primary hover:bg-(--color-primary-light)">Become a Member</a>
+              <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" data-payment-confirm="true" class="w-full text-white border-0 btn bg-primary hover:bg-(--color-primary-light)">Become a Member</a>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@
               <li>24/7 access</li>
             </ul>
             <div class="mt-6 card-actions">
-              <a href="https://buy.stripe.com/eVa28N1Eadv31qwbII" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Choose Monthly</a>
+              <a href="https://buy.stripe.com/eVa28N1Eadv31qwbII" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Choose Monthly</a>
             </div>
           </div>
         </div>
@@ -240,7 +240,7 @@
               <li>24/7 access</li>
             </ul>
             <div class="mt-6 card-actions">
-              <a href="https://buy.stripe.com/3csdRvfv02QpfhmdQS" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Buy Entry</a>
+              <a href="https://buy.stripe.com/3csdRvfv02QpfhmdQS" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Buy Entry</a>
             </div>
           </div>
         </div>
@@ -511,7 +511,7 @@
       </svg>
       <span class="dock-label">Pricing</span>
     </a>
-    <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" aria-label="Entry"
+    <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" data-payment-confirm="true" aria-label="Entry"
       class="font-semibold text-accent-600 contrast-125 saturate-150">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -519,8 +519,51 @@
       <span class="dock-label">Entry</span>
     </a>
   </div>
+  <dialog id="payment-confirm-modal-en" class="modal">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">Payment confirmation</h3>
+      <p class="py-4">Great choice!
+        We will redirect you to a secure Stripe payment.
+        After payment, we will contact you to find a time for your first entry.
+        Don't forget your towel and workout shoes. We look forward to seeing you at Olympia Gym!
+      </p>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-ghost">Close</button>
+        </form>
+        <a id="payment-continue-en" href="#" class="btn btn-primary">Continue to payment</a>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>Close</button>
+    </form>
+  </dialog>
 
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var paymentModal = document.getElementById('payment-confirm-modal-en');
+    var continueButton = document.getElementById('payment-continue-en');
+    var triggerButtons = document.querySelectorAll('a[data-payment-confirm="true"]');
+
+    if (!paymentModal || !continueButton || !triggerButtons.length) {
+      return;
+    }
+
+    triggerButtons.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        var destination = button.getAttribute('href');
+        if (!destination) {
+          return;
+        }
+        continueButton.setAttribute('href', destination);
+        paymentModal.showModal();
+      });
+    });
+  });
+</script>
 
 <script>
   (function () {
