@@ -178,6 +178,77 @@
     </div>
   </section>
 
+  <!-- Offers Bar -->
+  <section class="w-full py-6 bg-gray-50 border-y border-gray-200" id="discount">
+    <div class="px-6 mx-auto max-w-7xl lg:px-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-6">
+
+        <!-- Student Discount Alert -->
+        <div role="alert" class="flex-1 alert bg-white text-gray-900 border border-gray-200 shadow-sm rounded-2xl min-h-24 items-center">
+          <span class="text-base font-semibold">🎓 Studentská sleva -100 Kč!</span>
+          <button onclick="document.getElementById('modal_student').showModal()" class="btn btn-sm btn-outline btn-accent ml-auto">Ověřit</button>
+        </div>
+
+        <!-- Referral Stat -->
+        <div class="flex-1 bg-white rounded-2xl ring-1 ring-gray-200 shadow-sm px-6 py-3 flex items-center gap-4 min-h-24">
+          <div class="stat p-0">
+            <div class="stat-title text-xs text-gray-500">Odměna za doporučení</div>
+            <div class="stat-value text-2xl text-accent">100 Kč</div>
+            <div class="stat-desc text-gray-500">Cvičte klidně zdarma</div>
+          </div>
+          <button onclick="document.getElementById('modal_referral').showModal()" class="btn btn-sm btn-outline btn-accent ml-auto">Zjistit více</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal: Student Discount -->
+  <dialog id="modal_student" class="modal">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">🎓 Ověření studentské slevy</h3>
+      <p class="py-2 text-sm text-gray-600">Vyplňte níže a my vám pošleme promo kód na slevu 100 Kč po ověření studentského průkazu.</p>
+      <form method="dialog" id="student_form">
+        <div class="form-control mt-2">
+          <label class="label"><span class="label-text">Jméno</span></label>
+          <input type="text" name="name" required placeholder="Vaše jméno" class="input input-bordered w-full" />
+        </div>
+        <div class="form-control mt-2">
+          <label class="label"><span class="label-text">Email</span></label>
+          <input type="email" name="email" required placeholder="vas@email.cz" class="input input-bordered w-full" />
+        </div>
+        <div class="modal-action">
+          <button type="button" onclick="document.getElementById('modal_student').close()" class="btn btn-ghost">Zavřít</button>
+          <a href="mailto:olympiagymcz@gmail.com?subject=Studentská%20sleva%20-%20ověření" class="btn btn-info">Odeslat</a>
+        </div>
+      </form>
+    </div>
+    <form method="dialog" class="modal-backdrop"><button>close</button></form>
+  </dialog>
+
+  <!-- Modal: Referral -->
+  <dialog id="modal_referral" class="modal">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">Odměna za doporučení</h3>
+      <p class="py-2 text-sm text-gray-600">Přiveďte kamaráda a získejte 100 Kč slevu na každý měsíc, kdy je váš kamarád aktivním členem. Slevy se sčítají!</p>
+      <div class="form-control mt-2">
+        <label class="label"><span class="label-text">Váš email (stávající člen)</span></label>
+        <input type="email" placeholder="vas@email.cz" class="input input-bordered w-full" />
+      </div>
+      <div class="form-control mt-2">
+        <label class="label"><span class="label-text">Email nového člena</span></label>
+        <input type="email" placeholder="kamarad@email.cz" class="input input-bordered w-full" />
+      </div>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-ghost">Zavřít</button>
+        </form>
+        <a href="mailto:olympiagymcz@gmail.com?subject=Referral%20program" class="btn btn-accent">Odeslat</a>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop"><button>close</button></form>
+  </dialog>
+
   <section class="w-full py-16 sm:py-8" id="clenstvi">
     <div class="px-6 mx-auto max-w-7xl lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
@@ -250,7 +321,6 @@
     </div>
   </section>
 
-  <!-- ...existing code... after the discount section... -->
   <section class="w-full py-16 sm:py-8" id="additional-services">
     <div class="px-6 mx-auto max-w-7xl lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
@@ -311,113 +381,6 @@
     </div>
   </section>
 
-  <section class="w-full py-16 sm:py-8" id="discount">
-    <div class="px-6 mx-auto max-w-7xl lg:px-8">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-base font-semibold leading-7 text-accent">Speciální nabídky</h2>
-        <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Výhodné slevy pro vás</p>
-      </div>
-
-      <p class="max-w-2xl mx-auto mt-6 text-lg leading-8 text-center text-gray-600">Nabízíme výhodné slevy pro studenty
-        a věrnostní program pro členy, kteří přivedou nové členy. Máte-li zájem, kontaktujte nás a rádi vše vysvětlíme.
-      </p>
-
-      <div class="grid max-w-3xl grid-cols-1 gap-8 mx-auto mt-12 lg:grid-cols-2">
-        <!-- Student discount -->
-        <div class="flex flex-col justify-between p-8 bg-white rounded-2xl ring-1 ring-gray-200">
-          <div>
-            <div class="flex items-center justify-between gap-x-4">
-              <h3 class="text-lg font-semibold leading-8 text-gray-900">Studentská sleva</h3>
-              <span
-                class="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full bg-accent/10 text-accent">-100
-                Kč</span>
-            </div>
-
-            <p class="mt-4 text-sm leading-6 text-gray-600">Studenti získají slevu 100 Kč na členství. Kontaktujte nás a
-              po doložení studentského průkazu vám vystavíme promo kód.</p>
-
-            <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-              <li class="flex gap-x-3">
-                <svg class="flex-none w-5 h-6 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                Sleva 100 Kč po ověření studentského statusu.
-              </li>
-              <li class="flex gap-x-3">
-                <svg class="flex-none w-5 h-6 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                Sleva platí po celou dobu, kdy je členství aktivní.
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-8">
-            <a href="contact.html"
-              class="justify-center px-4 py-2 text-sm font-semibold text-white rounded-md bg-accent hover:bg-accent-600">Kontaktovat
-              nás</a>
-            <a href="mailto:olympiagymcz@gmail.com?subject=Studentská sleva"
-              class="ml-4 text-sm font-medium leading-6 text-gray-700 underline">Napsat email</a>
-          </div>
-        </div>
-
-        <!-- Referral program -->
-        <div class="flex flex-col justify-between p-8 bg-white rounded-2xl ring-1 ring-gray-200">
-          <div>
-            <div class="flex items-center justify-between gap-x-4">
-              <h3 class="text-lg font-semibold leading-8 text-gray-900">Odměna za doporučení</h3>
-              <span class="px-3 py-1 text-sm font-medium rounded-full bg-accent/10 text-accent">-100
-                Kč/člen</span>
-            </div>
-
-            <p class="mt-4 text-sm leading-6 text-gray-600">Aktivní členové získají slevu 100 Kč za každého nového
-              člena, kterého přivedou. Sleva se uplatní po dobu, kdy je přivedený člen aktivní.</p>
-
-            <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-              <li class="flex gap-x-3">
-                <svg class="flex-none w-5 h-6 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                Sleva 100 Kč za každého ověřeného nového člena.
-              </li>
-              <li class="flex gap-x-3">
-                <svg class="flex-none w-5 h-6 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                Slevy se mohou sčítat. Ano můžete chodit zdarma.
-              </li>
-              <li class="flex gap-x-3">
-                <svg class="flex-none w-5 h-6 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                Pří nákupu členství pro nového člena je potřeba uvést email stávajícího člena.
-              </li>
-            </ul>
-          </div>
-
-          <div class="mt-8">
-            <a href="contact.html"
-              class="justify-center px-4 py-2 text-sm font-semibold text-white rounded-md bg-accent hover:bg-accent-600">Kontaktovat
-              nás</a>
-            <a href="mailto:olympiagymcz@gmail.com?subject=Referall program"
-              class="ml-4 text-sm font-medium leading-6 text-gray-700 underline">Napsat email</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
   <section id="faq">
     <div class="px-6 py-16 mx-auto max-w-7xl sm:py-24 lg:px-8">
       <h2 class="text-2xl font-bold leading-10 tracking-tight text-center text-gray-900">
@@ -429,19 +392,8 @@
           class="font-semibold text-accent hover:text-accent-600">na email</a>
         a my se ozveme tak rychle jak zvládneme.
       </p>
-      <div class="max-w-4xl mx-auto mt-12 space-y-4">
-        <div class="bg-white border border-gray-200 collapse collapse-plus">
-          <input type="radio" name="faq-accordion-cs" checked="checked" />
-          <div class="text-base font-semibold text-gray-900 collapse-title">
-            Jak to funguje?
-          </div>
-          <div class="text-gray-600 collapse-content">
-            <p>
-              Zaplatíte členství, přijde vám potvrzovací email a domluvíme krátké osobní setkání. Na něm dostanete čip pro vstup.
-            </p>
-          </div>
-        </div>
 
+      <div class="max-w-4xl mx-auto mt-12 space-y-4">
         <div class="bg-white border border-gray-200 collapse collapse-plus">
           <input type="radio" name="faq-accordion-cs" />
           <div class="text-base font-semibold text-gray-900 collapse-title">
