@@ -92,7 +92,7 @@
           Absolutní soukromí a svoboda. Cvičte kdykoliv, bez front.
         </p>
         <div class="mt-10">
-          <a href="#discount" class="btn btn-primary btn-lg">Zobrazit ceník</a>
+          <a href="#clenstvi" class="btn btn-primary btn-lg">Zobrazit ceník</a>
         </div>
       </div>
     </div>
@@ -178,35 +178,6 @@
     </div>
   </section>
 
-  <!-- Offers Bar -->
-  <section class="w-full py-6 border-gray-200 bg-gray-50 border-y" id="discount">
-    <div class="px-6 mx-auto max-w-7xl lg:px-8">
-      <div class="flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-6">
-
-        <!-- Student Discount Alert -->
-        <div role="alert" class="flex items-center flex-1 gap-4 px-6 py-3 text-gray-900 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-24">
-          <div class="p-0 stat">
-            <div class="text-xs text-gray-500 stat-title">🎓 Studentská sleva</div>
-            <div class="text-2xl stat-value text-accent">-100 Kč</div>
-            <div class="text-gray-500 stat-desc">Po ověření průkazu</div>
-          </div>
-          <button onclick="document.getElementById('modal_student').showModal()" class="ml-auto btn btn-sm btn-outline btn-accent">Ověřit</button>
-        </div>
-
-        <!-- Referral Stat -->
-        <div class="flex items-center flex-1 gap-4 px-6 py-3 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-24">
-          <div class="p-0 stat">
-            <div class="text-xs text-gray-500 stat-title">Odměna za doporučení</div>
-            <div class="text-2xl stat-value text-accent">100 Kč</div>
-            <div class="text-gray-500 stat-desc">Cvičte klidně zdarma</div>
-          </div>
-          <button onclick="document.getElementById('modal_referral').showModal()" class="ml-auto btn btn-sm btn-outline btn-accent">Zjistit více</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- Modal: Student Discount -->
   <dialog id="modal_student" class="modal">
     <div class="modal-box">
@@ -253,70 +224,97 @@
     <form method="dialog" class="modal-backdrop"><button>close</button></form>
   </dialog>
 
-  <section class="w-full py-16 sm:py-8" id="clenstvi">
+  <section class="w-full py-10 sm:py-8" id="clenstvi">
     <div class="px-6 mx-auto max-w-7xl lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-base font-semibold leading-7 text-accent">
           Možnosti členství
         </h2>
-        <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
           Vstupné pro každého
         </p>
       </div>
-      <p class="max-w-2xl mx-auto mt-6 text-lg leading-8 text-center text-gray-600">
+      <p class="max-w-2xl mx-auto mt-4 text-base leading-7 text-center text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
         Jsme privátní fitness centrum otevřené 24/7. Pro maximální pohodlí a bezpečí je vstup možný jen po registraci,
         zaplacení členství a vstupní prohlídce, díky čemuž centrum není přeplněné a má dost prostoru pro všechny.
       </p>
-      <div class="grid grid-cols-1 gap-6 mt-16 md:grid-cols-3">
+
+      <div class="mt-6 sm:mt-8" id="discount">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-6">
+
+          <!-- Student Discount Alert -->
+          <div role="alert" class="flex items-center flex-1 gap-3 px-4 py-2.5 text-gray-900 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-20 sm:gap-4 sm:px-6 sm:py-3 sm:min-h-24">
+            <div class="p-0 stat">
+              <div class="text-xs text-gray-500 stat-title">🎓 Studentská sleva</div>
+              <div class="text-xl stat-value text-accent sm:text-2xl">-100 Kč</div>
+              <div class="text-gray-500 stat-desc">Po ověření průkazu</div>
+            </div>
+            <button onclick="document.getElementById('modal_student').showModal()" class="ml-auto btn btn-sm btn-outline btn-accent">Ověřit</button>
+          </div>
+
+          <!-- Referral Stat -->
+          <div class="flex items-center flex-1 gap-3 px-4 py-2.5 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-20 sm:gap-4 sm:px-6 sm:py-3 sm:min-h-24">
+            <div class="p-0 stat">
+              <div class="text-xs text-gray-500 stat-title">Odměna za doporučení</div>
+              <div class="text-xl stat-value text-accent sm:text-2xl">100 Kč</div>
+              <div class="text-gray-500 stat-desc">Cvičte klidně zdarma</div>
+            </div>
+            <button onclick="document.getElementById('modal_referral').showModal()" class="ml-auto btn btn-sm btn-outline btn-accent">Zjistit více</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 mt-8 sm:mt-10 md:grid-cols-3 md:gap-6" id="pricing">
         <div class="bg-white shadow-xl card ring-1 ring-gray-200">
-          <div class="text-gray-900 card-body">
+          <div class="p-5 text-gray-900 card-body sm:p-6">
             <div class="flex items-start justify-between gap-2">
               <h3 id="tier-weekly" class="text-xl font-semibold leading-tight text-gray-900">Týdenní členství</h3>
               <span class="self-start text-white border-0 badge bg-primary shrink-0 whitespace-nowrap">Nejoblíbenější</span>
             </div>
             <p class="mt-2 text-sm text-gray-600">Flexibilní varianta bez dlouhodobého závazku.</p>
-            <p class="mt-4 text-5xl font-bold text-gray-900">333 Kč</p>
+            <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">333 Kč</p>
             <p class="-mt-2 text-sm font-medium text-gray-500">/týden</p>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside">
+            <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
               <li>Samoobslužný vstup</li>
               <li>Žádné závazky</li>
               <li>24/7 přístup</li>
             </ul>
-            <div class="mt-6 card-actions">
+            <div class="mt-4 card-actions">
               <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" data-payment-confirm="true" class="w-full text-white border-0 btn bg-primary hover:bg-(--color-primary-light)">Stát se členem</a>
             </div>
           </div>
         </div>
 
         <div class="bg-white shadow-xl card ring-1 ring-gray-200">
-          <div class="text-gray-900 card-body">
+          <div class="p-5 text-gray-900 card-body sm:p-6">
             <h3 id="tier-monthly" class="text-xl font-semibold text-gray-900">Měsíční členství</h3>
             <p class="mt-2 text-sm text-gray-600">Nejlepší poměr ceny a frekvence tréninku pro pravidelné cvičení.</p>
-            <p class="mt-4 text-5xl font-bold text-gray-900">1299 Kč</p>
+            <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">1299 Kč</p>
             <p class="-mt-2 text-sm font-medium text-gray-500">/měsíc</p>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside">
+            <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
               <li>Samoobslužný vstup</li>
               <li>Žádné závazky</li>
               <li>24/7 přístup</li>
             </ul>
-            <div class="mt-6 card-actions">
+            <div class="mt-4 card-actions">
               <a href="https://buy.stripe.com/eVa28N1Eadv31qwbII" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Vybrat měsíční</a>
             </div>
           </div>
         </div>
 
         <div class="bg-white shadow-xl card ring-1 ring-gray-200">
-          <div class="text-gray-900 card-body">
+          <div class="p-5 text-gray-900 card-body sm:p-6">
             <h3 id="tier-trial" class="text-xl font-semibold text-gray-900">Zkušební vstup</h3>
             <p class="mt-2 text-sm text-gray-600">Jednorázová návštěva pro první zkušenost s Olympia Gym.</p>
-            <p class="mt-4 text-5xl font-bold text-gray-900">200 Kč</p>
+            <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">200 Kč</p>
             <p class="-mt-2 text-sm font-medium text-gray-500">/vstup</p>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside">
+            <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
               <li>Samoobslužný vstup</li>
               <li>Žádné závazky</li>
               <li>24/7 přístup</li>
             </ul>
-            <div class="mt-6 card-actions">
+            <div class="mt-4 card-actions">
               <a href="https://buy.stripe.com/3csdRvfv02QpfhmdQS" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Koupit vstup</a>
             </div>
           </div>
