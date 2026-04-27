@@ -62,12 +62,12 @@
           class="hidden text-white btn btn-sm bg-secondary hover:bg-secondary-light md:inline-flex">Správa členství</a>
 
         <div class="dropdown dropdown-end md:hidden">
-          <label tabindex="0" class="text-white btn btn-ghost btn-circle" aria-label="Otevřít menu">
+          <label tabindex="0" class="text-white btn btn-ghost btn-circle mobile-menu-trigger" aria-label="Otevřít menu">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </label>
-          <ul tabindex="0" class="p-2 mt-3 shadow menu menu-sm dropdown-content z-60 w-60 rounded-box bg-base-100">
+          <ul tabindex="0" class="p-2 mt-3 shadow menu menu-sm dropdown-content z-60 w-60 rounded-box bg-base-100 mobile-menu-panel">
             <li><a href="index.html#clenstvi">Členství</a></li>
             <li><a href="index.html#faq">FAQ</a></li>
             <li><a href="gallery.html">Galerie</a></li>
@@ -549,11 +549,11 @@
       </svg>
       <span class="dock-label">Ceník</span>
     </a>
-    <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" data-payment-confirm="true" aria-label="Vstup">
+    <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" data-weekly-membership-modal="true" aria-label="Členství 333">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
       </svg>
-      <span class="dock-label">Vstup</span>
+      <span class="dock-label">Členství 333</span>
     </a>
   </div>
   <dialog id="locker-confirm-modal-cs" class="modal">
@@ -592,9 +592,64 @@
       <button>Zavřít</button>
     </form>
   </dialog>
+
+  <dialog id="weekly-membership-modal-cs" class="modal">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">Týdenní členství 333 Kč</h3>
+      <p class="py-2 text-sm text-gray-600">Týdenní členství za 333 Kč. Před platbou si můžete zkontrolovat, co přesně zahrnuje.</p>
+
+      <div class="mt-2 bg-white shadow-sm card ring-1 ring-gray-200">
+        <div class="p-4 card-body">
+          <div class="flex items-start justify-between gap-2">
+            <h4 class="text-base font-semibold text-gray-900">Týdenní členství</h4>
+            <span class="text-white border-0 badge bg-primary">333 Kč / týden</span>
+          </div>
+          <ul class="mt-1 space-y-1 text-sm text-gray-700 list-disc list-inside">
+            <li>Samoobslužný vstup</li>
+            <li>Žádné závazky</li>
+            <li>24/7 přístup</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="pt-3 text-sm text-gray-600">Po kliknutí na Pokračovat budete přesměrováni na zabezpečenou platbu Stripe.</p>
+
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-ghost">Zavřít</button>
+        </form>
+        <a id="weekly-membership-continue-cs" href="#" class="btn btn-primary">Pokračovat na Stripe</a>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>Zavřít</button>
+    </form>
+  </dialog>
 </body>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var weeklyMembershipModal = document.getElementById('weekly-membership-modal-cs');
+    var weeklyMembershipContinue = document.getElementById('weekly-membership-continue-cs');
+    var weeklyMembershipButtons = document.querySelectorAll('a[data-weekly-membership-modal="true"]');
+
+    if (!weeklyMembershipModal || !weeklyMembershipContinue || !weeklyMembershipButtons.length) {
+      return;
+    }
+
+    weeklyMembershipButtons.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+        var destination = button.getAttribute('href');
+        if (!destination) {
+          return;
+        }
+        weeklyMembershipContinue.setAttribute('href', destination);
+        weeklyMembershipModal.showModal();
+      });
+    });
+  });
+
   document.addEventListener('DOMContentLoaded', function () {
     var lockerModal = document.getElementById('locker-confirm-modal-cs');
     var lockerContinue = document.getElementById('locker-continue-cs');
