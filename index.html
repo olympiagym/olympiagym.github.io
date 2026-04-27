@@ -179,28 +179,28 @@
   </section>
 
   <!-- Offers Bar -->
-  <section class="w-full py-6 bg-gray-50 border-y border-gray-200" id="discount">
+  <section class="w-full py-6 border-gray-200 bg-gray-50 border-y" id="discount">
     <div class="px-6 mx-auto max-w-7xl lg:px-8">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-6">
 
         <!-- Student Discount Alert -->
-        <div role="alert" class="flex flex-1 items-center gap-4 px-6 py-3 bg-white text-gray-900 border border-gray-200 shadow-sm rounded-2xl min-h-24">
-          <div class="stat p-0">
-            <div class="stat-title text-xs text-gray-500">🎓 Studentská sleva</div>
-            <div class="stat-value text-2xl text-accent">-100 Kč</div>
-            <div class="stat-desc text-gray-500">Po ověření průkazu</div>
+        <div role="alert" class="flex items-center flex-1 gap-4 px-6 py-3 text-gray-900 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-24">
+          <div class="p-0 stat">
+            <div class="text-xs text-gray-500 stat-title">🎓 Studentská sleva</div>
+            <div class="text-2xl stat-value text-accent">-100 Kč</div>
+            <div class="text-gray-500 stat-desc">Po ověření průkazu</div>
           </div>
-          <button onclick="document.getElementById('modal_student').showModal()" class="btn btn-sm btn-outline btn-accent ml-auto">Ověřit</button>
+          <button onclick="document.getElementById('modal_student').showModal()" class="ml-auto btn btn-sm btn-outline btn-accent">Ověřit</button>
         </div>
 
         <!-- Referral Stat -->
-        <div class="flex flex-1 items-center gap-4 px-6 py-3 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-24">
-          <div class="stat p-0">
-            <div class="stat-title text-xs text-gray-500">Odměna za doporučení</div>
-            <div class="stat-value text-2xl text-accent">100 Kč</div>
-            <div class="stat-desc text-gray-500">Cvičte klidně zdarma</div>
+        <div class="flex items-center flex-1 gap-4 px-6 py-3 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-24">
+          <div class="p-0 stat">
+            <div class="text-xs text-gray-500 stat-title">Odměna za doporučení</div>
+            <div class="text-2xl stat-value text-accent">100 Kč</div>
+            <div class="text-gray-500 stat-desc">Cvičte klidně zdarma</div>
           </div>
-          <button onclick="document.getElementById('modal_referral').showModal()" class="btn btn-sm btn-outline btn-accent ml-auto">Zjistit více</button>
+          <button onclick="document.getElementById('modal_referral').showModal()" class="ml-auto btn btn-sm btn-outline btn-accent">Zjistit více</button>
         </div>
 
       </div>
@@ -213,13 +213,13 @@
       <h3 class="text-lg font-bold">🎓 Ověření studentské slevy</h3>
       <p class="py-2 text-sm text-gray-600">Vyplňte níže a my vám pošleme promo kód na slevu 100 Kč po ověření studentského průkazu.</p>
       <form method="dialog" id="student_form">
-        <div class="form-control mt-2">
+        <div class="mt-2 form-control">
           <label class="label"><span class="label-text">Jméno</span></label>
-          <input type="text" name="name" required placeholder="Vaše jméno" class="input input-bordered w-full" />
+          <input type="text" name="name" required placeholder="Vaše jméno" class="w-full input input-bordered" />
         </div>
-        <div class="form-control mt-2">
+        <div class="mt-2 form-control">
           <label class="label"><span class="label-text">Email</span></label>
-          <input type="email" name="email" required placeholder="vas@email.cz" class="input input-bordered w-full" />
+          <input type="email" name="email" required placeholder="vas@email.cz" class="w-full input input-bordered" />
         </div>
         <div class="modal-action">
           <button type="button" onclick="document.getElementById('modal_student').close()" class="btn btn-ghost">Zavřít</button>
@@ -235,13 +235,13 @@
     <div class="modal-box">
       <h3 class="text-lg font-bold">Odměna za doporučení</h3>
       <p class="py-2 text-sm text-gray-600">Přiveďte kamaráda a získejte 100 Kč slevu na každý měsíc, kdy je váš kamarád aktivním členem. Slevy se sčítají!</p>
-      <div class="form-control mt-2">
+      <div class="mt-2 form-control">
         <label class="label"><span class="label-text">Váš email (stávající člen)</span></label>
-        <input type="email" placeholder="vas@email.cz" class="input input-bordered w-full" />
+        <input type="email" placeholder="vas@email.cz" class="w-full input input-bordered" />
       </div>
-      <div class="form-control mt-2">
+      <div class="mt-2 form-control">
         <label class="label"><span class="label-text">Email nového člena</span></label>
-        <input type="email" placeholder="kamarad@email.cz" class="input input-bordered w-full" />
+        <input type="email" placeholder="kamarad@email.cz" class="w-full input input-bordered" />
       </div>
       <div class="modal-action">
         <form method="dialog">
@@ -270,9 +270,9 @@
       <div class="grid grid-cols-1 gap-6 mt-16 md:grid-cols-3">
         <div class="bg-white shadow-xl card ring-1 ring-gray-200">
           <div class="text-gray-900 card-body">
-            <div class="flex items-center justify-between">
-              <h3 id="tier-weekly" class="text-xl font-semibold text-gray-900">Týdenní členství</h3>
-              <span class="text-white border-0 badge bg-primary">Nejoblíbenější</span>
+            <div class="flex items-start justify-between gap-2">
+              <h3 id="tier-weekly" class="text-xl font-semibold leading-tight text-gray-900">Týdenní členství</h3>
+              <span class="self-start text-white border-0 badge bg-primary shrink-0 whitespace-nowrap">Nejoblíbenější</span>
             </div>
             <p class="mt-2 text-sm text-gray-600">Flexibilní varianta bez dlouhodobého závazku.</p>
             <p class="mt-4 text-5xl font-bold text-gray-900">333 Kč</p>
