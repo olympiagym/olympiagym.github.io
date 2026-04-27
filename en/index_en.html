@@ -28,6 +28,11 @@
 
 <body class="pb-24 bg-gray-100 md:pb-0">
   <header class="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-black/60 backdrop-blur-md">
+    <div class="px-4 py-2 font-sans text-center text-white sm:px-6 lg:px-8" style="background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-light));">
+      <span class="text-sm font-semibold sm:text-base">
+        🔥 SPECIAL OFFER: 6 months for 999 Kč/month + FREE Training Entry! <a href="#clenstvi" class="underline underline-offset-2 hover:opacity-90">[Claim Offer →]</a>
+      </span>
+    </div>
     <nav class="px-4 mx-auto navbar max-w-7xl sm:px-6 lg:px-8" aria-label="Global">
       <div class="navbar-start">
         <a href="index_en.html" class="gap-2 px-2 text-white normal-case btn btn-ghost">
@@ -181,7 +186,7 @@
   <dialog id="modal_student_en" class="modal">
     <div class="modal-box">
       <h3 class="text-lg font-bold">🎓 Student discount verification</h3>
-      <p class="py-2 text-sm text-gray-600">Fill this out and we will send you a 100 Kč promo code after student status verification.</p>
+      <p class="py-2 text-sm text-gray-600">Fill this out, attach student verification and we will send you a 10% promo code.</p>
       <form method="dialog" id="student_form_en">
         <div class="mt-2 form-control">
           <label class="label"><span class="label-text">Name</span></label>
@@ -204,7 +209,7 @@
   <dialog id="modal_referral_en" class="modal">
     <div class="modal-box">
       <h3 class="text-lg font-bold">Referral reward</h3>
-      <p class="py-2 text-sm text-gray-600">Bring a friend and get a 100 Kč discount for every month they stay active. Rewards stack.</p>
+      <p class="py-2 text-sm text-gray-600">Bring a friend and get a 10% discount for every month they stay active. Rewards stack.</p>
       <div class="mt-2 form-control">
         <label class="label"><span class="label-text">Your email (existing member)</span></label>
         <input type="email" placeholder="you@email.com" class="w-full input input-bordered" />
@@ -244,7 +249,7 @@
           <div role="alert" class="flex items-center flex-1 gap-3 px-4 py-2.5 text-gray-900 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-20 sm:gap-4 sm:px-6 sm:py-3 sm:min-h-24">
             <div class="p-0 stat">
               <div class="text-xs text-gray-500 stat-title">🎓 Student discount</div>
-              <div class="text-xl stat-value text-accent sm:text-2xl">-100 Kč</div>
+              <div class="text-xl stat-value text-accent sm:text-2xl">10%</div>
               <div class="text-gray-500 stat-desc">After student verification</div>
             </div>
             <button onclick="document.getElementById('modal_student_en').showModal()" class="ml-auto btn btn-sm btn-outline btn-accent">Verify</button>
@@ -254,7 +259,7 @@
           <div class="flex items-center flex-1 gap-3 px-4 py-2.5 bg-white border border-gray-200 shadow-sm rounded-2xl min-h-20 sm:gap-4 sm:px-6 sm:py-3 sm:min-h-24">
             <div class="p-0 stat">
               <div class="text-xs text-gray-500 stat-title">Referral reward</div>
-              <div class="text-xl stat-value text-accent sm:text-2xl">100 Kč</div>
+              <div class="text-xl stat-value text-accent sm:text-2xl">10%</div>
               <div class="text-gray-500 stat-desc">Train basically for free</div>
             </div>
             <button onclick="document.getElementById('modal_referral_en').showModal()" class="ml-auto btn btn-sm btn-outline btn-accent">Learn more</button>
@@ -263,81 +268,103 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 mt-8 sm:mt-10 md:grid-cols-4 md:gap-6" id="pricing">
-        <div class="bg-white shadow-xl card ring-1 ring-gray-200">
-          <div class="p-5 text-gray-900 card-body sm:p-6">
-            <div class="md:min-h-28">
-              <div class="flex items-start justify-between gap-2">
+      <div class="mt-8 space-y-4 sm:mt-10 sm:space-y-6" id="pricing">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+          <div class="order-2 bg-white shadow-xl card ring-1 ring-gray-200 md:order-1">
+            <div class="h-full p-5 text-gray-900 card-body sm:p-6 md:min-h-108">
+              <div class="md:min-h-28">
                 <h3 id="tier-weekly" class="text-xl font-semibold leading-tight text-gray-900">Weekly Membership</h3>
-                <span class="self-start text-white border-0 badge bg-primary shrink-0 whitespace-nowrap">Most Popular</span>
+                <p class="mt-2 text-sm text-gray-600">No long-term commitment.</p>
               </div>
-              <p class="mt-2 text-sm text-gray-600">No long-term commitment.</p>
+              <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">333 Kč</p>
+              <p class="-mt-2 text-sm font-medium text-gray-500">/week</p>
+              <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
+                <li>Self-service entry</li>
+                <li>No commitments</li>
+                <li>24/7 access</li>
+              </ul>
+              <div class="mt-4 card-actions">
+                <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" data-payment-confirm="true" class="w-full bg-white btn btn-ghost border-primary text-primary hover:bg-white/90 hover:border-(--color-primary-light)">Choose Weekly</a>
+              </div>
             </div>
-            <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">333 Kč</p>
-            <p class="-mt-2 text-sm font-medium text-gray-500">/week</p>
-            <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
-              <li>Self-service entry</li>
-              <li>No commitments</li>
-              <li>24/7 access</li>
-            </ul>
-            <div class="mt-4 card-actions">
-              <a href="https://buy.stripe.com/bJe3cu4cJcfv8Qj3Gu43S06" data-payment-confirm="true" class="w-full text-white border-0 btn bg-primary hover:bg-(--color-primary-light)">Become a Member</a>
+          </div>
+
+          <div class="order-1 bg-white shadow-xl card md:order-2 md:shadow-2xl md:-translate-y-2" style="border: 2px solid var(--color-primary); box-shadow: 0 0 20px rgba(123, 66, 246, 0.3);" id="promo">
+            <div class="h-full p-5 text-gray-900 card-body sm:p-6 md:min-h-[29.7rem]">
+              <div class="md:min-h-28">
+                <span class="inline-flex px-3 py-1 text-xs font-semibold tracking-wide text-yellow-900 uppercase bg-yellow-300 rounded-md">BEST VALUE</span>
+                <h3 id="tier-six-month" class="mt-3 text-xl font-semibold text-gray-900">6-Month Special Package</h3>
+                <p class="mt-2 text-sm text-gray-600">The best membership deal with bonus included.</p>
+              </div>
+              <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">999 Kč</p>
+              <p class="-mt-2 text-sm font-medium text-gray-500">/month for 6 months</p>
+              <p class="mt-1 text-xs text-gray-500">Save 1 800 Kč compared to monthly membership</p>
+              <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
+                <li>⭐ FREE: Training Entry (1 000 Kč)</li>
+                <li>Self-service entry</li>
+                <li>24/7 access</li>
+              </ul>
+              <div class="mt-4 card-actions">
+                <a href="mailto:olympiagymcz@gmail.com?subject=6-month%20special%20offer%20999%20Kč" class="w-full text-white border-0 btn bg-primary hover:bg-(--color-primary-light)">I Want This Deal</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-3 bg-white shadow-xl card ring-1 ring-gray-200 md:order-3">
+            <div class="h-full p-5 text-gray-900 card-body sm:p-6 md:min-h-108">
+              <div class="md:min-h-28">
+                <h3 id="tier-monthly" class="text-xl font-semibold text-gray-900">Monthly Membership</h3>
+                <p class="mt-2 text-sm text-gray-600">Best for regular training.</p>
+              </div>
+              <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">1299 Kč</p>
+              <p class="-mt-2 text-sm font-medium text-gray-500">/month</p>
+              <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
+                <li>Self-service entry</li>
+                <li>No commitments</li>
+                <li>24/7 access</li>
+              </ul>
+              <div class="mt-4 card-actions">
+                <a href="https://buy.stripe.com/eVa28N1Eadv31qwbII" data-payment-confirm="true" class="w-full bg-white btn btn-ghost border-primary text-primary hover:bg-white/90 hover:border-(--color-primary-light)">Choose Monthly</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="bg-white shadow-xl card ring-1 ring-gray-200">
-          <div class="p-5 text-gray-900 card-body sm:p-6">
-            <div class="md:min-h-28">
-              <h3 id="tier-monthly" class="text-xl font-semibold text-gray-900">Monthly Membership</h3>
-              <p class="mt-2 text-sm text-gray-600">Best for regular training.</p>
-            </div>
-            <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">1299 Kč</p>
-            <p class="-mt-2 text-sm font-medium text-gray-500">/month</p>
-            <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
-              <li>Self-service entry</li>
-              <li>No commitments</li>
-              <li>24/7 access</li>
-            </ul>
-            <div class="mt-4 card-actions">
-              <a href="https://buy.stripe.com/eVa28N1Eadv31qwbII" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Choose Monthly</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white shadow-xl card ring-1 ring-gray-200">
-          <div class="p-5 text-gray-900 card-body sm:p-6">
-            <div class="md:min-h-28">
-              <h3 id="tier-trial" class="text-xl font-semibold text-gray-900">Trial Entry</h3>
-              <p class="mt-2 text-sm text-gray-600">One-time visit.</p>
-            </div>
-            <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">200 Kč</p>
-            <p class="-mt-2 text-sm font-medium text-gray-500">/entry</p>
-            <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
-              <li>By appointment</li>
-              <li>Personal introduction</li>
-              <li>No commitment</li>
-            </ul>
-            <div class="mt-4 card-actions">
-              <a href="https://buy.stripe.com/3csdRvfv02QpfhmdQS" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Buy Entry</a>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 md:max-w-5xl md:mx-auto">
+          <div class="w-full shadow-lg bg-white/95 card ring-1 ring-gray-200 md:max-w-md md:justify-self-center">
+            <div class="p-4 text-gray-900 card-body sm:p-5">
+              <div class="md:min-h-20">
+                <h3 id="tier-trial" class="text-lg font-semibold text-gray-900">Trial Entry</h3>
+                <p class="mt-2 text-sm text-gray-600">One-time visit.</p>
+              </div>
+              <p class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">200 Kč</p>
+              <p class="-mt-1 text-sm font-medium text-gray-500">/entry</p>
+              <ul class="mt-2 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
+                <li>By appointment</li>
+                <li>Personal introduction</li>
+                <li>No commitment</li>
+              </ul>
+              <div class="mt-3 card-actions">
+                <a href="https://buy.stripe.com/3csdRvfv02QpfhmdQS" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Buy Entry</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="bg-white shadow-xl card ring-1 ring-gray-200">
-          <div class="p-5 text-gray-900 card-body sm:p-6">
-            <div class="md:min-h-28">
-              <h3 id="tier-personal-training" class="text-xl font-semibold text-gray-900">Personal Training with Entry</h3>
-              <p class="mt-2 text-sm text-gray-600">60-min session with trainer + entry</p>
-            </div>
-            <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">1000 Kč</p>
-            <p class="-mt-2 text-sm font-medium text-gray-500">/session</p>
-            <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
-              <li>Trainer will contact you to schedule</li>
-              <li>Bring clean shoes and a towel</li>
-            </ul>
-            <div class="mt-4 card-actions">
-              <a href="https://buy.stripe.com/aEU7t71Ea9eNd9e6os" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Book Training</a>
+          <div class="w-full shadow-lg bg-white/95 card ring-1 ring-gray-200 md:max-w-md md:justify-self-center">
+            <div class="p-4 text-gray-900 card-body sm:p-5">
+              <div class="md:min-h-20">
+                <h3 id="tier-personal-training" class="text-lg font-semibold text-gray-900">Personal Training with Entry</h3>
+                <p class="mt-2 text-sm text-gray-600">60-min session with trainer + entry</p>
+              </div>
+              <p class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">1000 Kč</p>
+              <p class="-mt-1 text-sm font-medium text-gray-500">/session</p>
+              <ul class="mt-2 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
+                <li>Trainer will contact you to schedule</li>
+                <li>Bring clean shoes and a towel</li>
+              </ul>
+              <div class="mt-3 card-actions">
+                <a href="https://buy.stripe.com/aEU7t71Ea9eNd9e6os" data-payment-confirm="true" class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Book Training</a>
+              </div>
             </div>
           </div>
         </div>
