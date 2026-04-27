@@ -330,41 +330,21 @@
       </div>
 
       <div class="max-w-3xl mx-auto mt-12">
-        <div class="p-8 bg-white rounded-2xl ring-1 ring-gray-200">
-          <div class="flex items-center justify-between gap-x-4">
-            <h3 class="text-lg font-semibold leading-8 text-gray-900">Personal locker</h3>
-            <span class="px-3 py-1 text-sm font-medium rounded-full bg-accent/10 text-accent">200 Kč/month</span>
-          </div>
-
-          <p class="mt-4 text-sm leading-6 text-gray-600">
-            Don't want to bring your stuff every time you come to train? Rent a personal locker and keep your
-            gear securely stored at our gym.
-          </p>
-
-          <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-            <li class="flex gap-x-3">
-              <svg class="flex-none w-5 h-6 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              Secure storage for workout clothes, towels and other equipment
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="flex-none w-5 h-6 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              Lockers are under camera surveillance.
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="flex-none w-5 h-6 text-accent" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-              Limited number of lockers - reserve yours as soon as possible
-            </li>
-          </ul>
-
-          <div class="mt-8">
-            <a href="https://buy.stripe.com/8x27sKgZv4N35E77WK43S05" class="justify-center px-4 py-2 text-sm font-semibold text-white rounded-md bg-accent hover:bg-accent-600">Rent a locker</a>
-            <a href="mailto:olympiagymcz@gmail.com?subject=Locker%20rental" class="ml-4 text-sm font-medium leading-6 text-gray-700 underline">Send email</a>
+        <div class="bg-white shadow-xl card ring-1 ring-gray-200">
+          <div class="p-5 text-gray-900 card-body sm:p-6">
+            <h3 class="text-xl font-semibold text-gray-900">Personal locker</h3>
+            <p class="mt-2 text-sm text-gray-600">Don't want to bring your stuff every time you come to train? Rent a personal locker and keep your gear securely stored at our gym.</p>
+            <p class="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">200 Kč</p>
+            <p class="-mt-2 text-sm font-medium text-gray-500">/month</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-gray-700 list-disc list-inside">
+              <li>Secure storage for workout clothes, towels and other equipment</li>
+              <li>Lockers are under camera surveillance</li>
+              <li>Limited number of lockers — reserve yours as soon as possible</li>
+            </ul>
+            <div class="mt-4 card-actions">
+              <a href="https://buy.stripe.com/8x27sKgZv4N35E77WK43S05" data-locker-confirm="true"
+                class="w-full btn btn-outline border-primary text-primary hover:border-(--color-primary-light) hover:bg-(--color-primary-light) hover:text-white">Rent a locker</a>
+            </div>
           </div>
         </div>
       </div>
@@ -450,7 +430,7 @@
           </div>
           <div class="text-gray-600 collapse-content">
             <p>
-              Yes. A lockable locker costs 200 CZK per month. Book it with the button above or by email.
+              Yes! A lockable locker costs 200 Kč per month. <a href="https://buy.stripe.com/8x27sKgZv4N35E77WK43S05" data-locker-confirm="true" class="font-semibold text-accent hover:text-accent-600">Rent a locker here</a>.
             </p>
           </div>
         </div>
@@ -509,6 +489,24 @@
       <span class="dock-label">Entry</span>
     </a>
   </div>
+  <dialog id="locker-confirm-modal-en" class="modal">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">Locker rental</h3>
+      <p class="py-4">Great choice! We will redirect you to a secure Stripe payment.
+        After payment, we will contact you and arrange which locker will be yours.
+      </p>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-ghost">Close</button>
+        </form>
+        <a id="locker-continue-en" href="#" class="btn btn-primary">Continue to payment</a>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>Close</button>
+    </form>
+  </dialog>
+
   <dialog id="payment-confirm-modal-en" class="modal">
     <div class="modal-box">
       <h3 class="text-lg font-bold">Payment confirmation</h3>
@@ -532,6 +530,24 @@
 </body>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var lockerModal = document.getElementById('locker-confirm-modal-en');
+    var lockerContinue = document.getElementById('locker-continue-en');
+    var lockerButtons = document.querySelectorAll('a[data-locker-confirm="true"]');
+
+    if (lockerModal && lockerContinue && lockerButtons.length) {
+      lockerButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          var destination = button.getAttribute('href');
+          if (!destination) { return; }
+          lockerContinue.setAttribute('href', destination);
+          lockerModal.showModal();
+        });
+      });
+    }
+  });
+
   document.addEventListener('DOMContentLoaded', function () {
     var paymentModal = document.getElementById('payment-confirm-modal-en');
     var continueButton = document.getElementById('payment-continue-en');
